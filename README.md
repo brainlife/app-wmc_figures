@@ -14,9 +14,9 @@
   <a href="https://github.com/brainlife/app-wmc_figures/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="MIT license"></a>
 </p>
 
-> 📍 **This branch, `1.1`, is the brainlife.io App Generate figures of white matter tracts overlaid on anatomical image** ([doi:10.25663/brainlife.app.607](https://doi.org/10.25663/brainlife.app.607)).
+> **This branch, `1.1`, is the brainlife.io App Generate figures of white matter tracts overlaid on anatomical image** ([doi:10.25663/brainlife.app.607](https://doi.org/10.25663/brainlife.app.607)).
 
-## 🧠 At a glance
+## At a glance
 
 <!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
 
@@ -26,27 +26,27 @@ For every tract in the classification (or the listed subset) and for all tracts 
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/wmc` · `neuro/anat/t1w` |
-| 📤 **Outputs** | `generic/images` |
-| 🐳 **Container** | `brainlife/dipy:1.4.1` |
-| ⚙️ **Resources** | 1 CPUs · 1 h walltime |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.607](https://doi.org/10.25663/brainlife.app.607) |
+| **Inputs** | `neuro/wmc` · `neuro/anat/t1w` |
+| **Outputs** | `generic/images` |
+| **Container** | `brainlife/dipy:1.4.1` |
+| **Resources** | 1 CPUs · 1 h walltime |
+| **Run it** | [doi.org/10.25663/brainlife.app.607](https://doi.org/10.25663/brainlife.app.607) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
 | `wmc` | `neuro/wmc` | yes | White Matter Classification structure |
 | `t1` | `neuro/anat/t1w` | yes | T1 image |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
 | `images` | `generic/images` | Images of the specified tracts, 6 figures each |
 
 <details>
-<summary><b>⚙️ Parameters</b> (6)</summary>
+<summary><b>Parameters</b> (6)</summary>
 
 | Parameter | Type | Default | Description |
 |---|---|---|---|
@@ -61,11 +61,11 @@ For every tract in the classification (or the listed subset) and for all tracts 
 
 <!-- brainlife-app:end -->
 
-## 🚀 Running the App
+## Running the App
 
 For each tract, the App draws six figures: axial, axial flipped, sagittal left, sagittal right, coronal and coronal flipped. It also draws the same six figures with all the tracts together.
 
-### ☁️ On brainlife.io
+### On brainlife.io
 
 Open the App at [doi.org/10.25663/brainlife.app.607](https://doi.org/10.25663/brainlife.app.607), choose a White Matter Classification (`neuro/wmc`) and a T1-weighted image in the same space, set the options and press **Execute**. The figures are archived to your project as a `generic/images` dataset and can be browsed on the task page.
 
@@ -76,7 +76,7 @@ Open the App at [doi.org/10.25663/brainlife.app.607](https://doi.org/10.25663/br
   - TractSeg (Wasserthal, 2018): [TRACT_CODES_TRACTSEG](TRACT_CODES_TRACTSEG.md)
   - White Matter Anatomy Segmentation (Bullock et al., 2019): [TRACT_CODES_WMASEG](TRACT_CODES_WMASEG.md)
 
-### 💻 Locally
+### Locally
 
 You need [Singularity/Apptainer](https://apptainer.org/); `main` runs `main.py` with FURY and nibabel in `brainlife/dipy:1.4.1`.
 
@@ -102,11 +102,11 @@ You need [Singularity/Apptainer](https://apptainer.org/); `main` runs `main.py` 
    ./main
    ```
 
-### 🧪 Sample data
+### Sample data
 
 Download a classification and a T1-weighted image from brainlife.io with the [brainlife CLI](https://github.com/brainlife/cli).
 
-## 📦 Outputs
+## Outputs
 
 ```text
 images/
@@ -115,13 +115,13 @@ images/
 images.json                      list of the figures with names and descriptions, shown on brainlife.io
 ```
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 - **`error: both or none img_min and img_max should be defined.`**: set both intensity limits, or leave both empty.
 - **Tracts misplaced on the anatomy**: the classification's tractogram and the T1 image must be in the same space.
 - **No figures for a listed tract**: the codes in `tracts` must match the tract names in the classification exactly.
 
-## 📚 Citing
+## Citing
 
 > [!TIP]
 > If you use this App in your work, please cite the App, the software it builds on and brainlife.io (below). GitHub's **Cite this repository** button gives the App citation in APA and BibTeX.
@@ -131,7 +131,7 @@ images.json                      list of the figures with names and descriptions
 - Hayashi S, Caron BA, Heinsfeld AS, et al. brainlife.io: a decentralized and open-source cloud platform to support neuroscience research. *Nature Methods* 21:809–813 (2024). [doi:10.1038/s41592-024-02237-2](https://doi.org/10.1038/s41592-024-02237-2)
 - Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. *Scientific Data* 6:69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
 
-## 👥 Authors
+## Authors
 
 - Lindsey Kitchell
 - [Brad Caron](https://github.com/bacaron)
@@ -139,7 +139,7 @@ images.json                      list of the figures with names and descriptions
 - [Anibal Sólon](https://github.com/anibalsolon)
 - [Franco Pestilli](https://github.com/francopestilli) (project director)
 
-## 💰 Funding
+## Funding
 
 [![Wellcome-226486/Z/22/Z](https://img.shields.io/badge/Wellcome-226486%2FZ%2F22%2FZ-purple.svg)](https://wellcome.org/)
 [![NIH-NINDS-U24NS140384](https://img.shields.io/badge/NIH_NINDS-U24NS140384-green.svg)](https://reporter.nih.gov/project-details/11261037)
@@ -160,6 +160,6 @@ images.json                      list of the figures with names and descriptions
 
 <sub>This material is based upon work supported by the National Science Foundation Graduate Research Fellowship under Grant No. 1342962. Any opinion, findings, and conclusions or recommendations expressed in this material are those of the authors(s) and do not necessarily reflect the views of the National Science Foundation.</sub>
 
-## ⚖️ License
+## License
 
 [MIT](https://github.com/brainlife/app-wmc_figures/blob/master/LICENSE).
